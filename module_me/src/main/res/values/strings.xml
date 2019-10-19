@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="public_name_follow">关注</string>
+    <string name="public_name_fans">粉丝</string>
+    <string name="public_name_goods">商品</string>
+    <string name="public_name_shop">店铺</string>
+    <string name="public_name_my_wallet">我的钱包</string>
+    <string name="public_name_my_shop">我的店铺</string>
+    <string name="public_name_shop_info">店铺信息</string>
+    <string name="public_name_company_authority">公司认证</string>
+    <string name="public_name_company_build">公司框架</string>
+    <string name="public_name_pay_bili">付款比例</string>
+    <string name="public_name_my_cangku">我的仓库</string>
+    <string name="public_name_my_category">我的分类</string>
+    <string name="public_name_setting">设置</string>
+</resources>
