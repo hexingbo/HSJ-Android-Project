@@ -3,4 +3,5 @@
     <string name="public_module_name">app</string>
     <string name="public_loading">加载中</string>
     <string name="public_name_my">我的</string>
+    <string name="public_order_manager">订单管理</string>
 </resources>

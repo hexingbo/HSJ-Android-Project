@@ -17,7 +17,7 @@ ext {
             rxlifecycleSdkVersion   : "3.0.0",
             rxlifecycle2SdkVersion  : "2.2.1",
             espressoSdkVersion      : "3.0.2",
-            canarySdkVersion        : "1.5.4"
+            canarySdkVersion        : "1.6.2"//https://www.jianshu.com/p/b83ddffcb3b5讲解
     ]
 
     dependencies = [
@@ -98,7 +98,7 @@ ext {
             "timber"                   : "com.jakewharton.timber:timber:4.7.0",
             "logger"                   : "com.orhanobut:logger:2.2.0",
             "canary-debug"             : "com.squareup.leakcanary:leakcanary-android:${version["canarySdkVersion"]}",
-            "canary-release"           : "com.squareup.leakcanary:leakcanary-android-no-op:${version["canarySdkVersion"]}",
+            "canary-release"           : "com.squareup.leakcanary:leakcanary-android-no-op:${version["canarySdkVersion"]}",//LeakCanary是Square公司基于MAT开源的一个工具，用来检测Android App中的内存泄露问题官方地址：https://github.com/square/leakcanary。
             "umeng-analytics"          : "com.umeng.analytics:analytics:6.0.1"
     ]
 }

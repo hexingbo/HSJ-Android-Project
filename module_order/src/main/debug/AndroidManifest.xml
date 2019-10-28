@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.echronos.epoandroid.me">
-
+    package="com.echronos.epoandroid.module_order">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -40,11 +39,11 @@
             android:name="me.jessyan.armscomponent.commonsdk.core.GlobalConfiguration"
             android:value="ConfigModule" />
         <meta-data
-            android:name="com.echronos.epoandroid.me.app.GlobalConfiguration"
+            android:name="com.echronos.epoandroid.module_order.app.GlobalConfiguration"
             android:value="ConfigModule" />
 
         <activity
-            android:name=".mvp.ui.activity.MeMainActivity"
+            android:name=".mvp.ui.activity.OrderListManagerActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait">
             <intent-filter>

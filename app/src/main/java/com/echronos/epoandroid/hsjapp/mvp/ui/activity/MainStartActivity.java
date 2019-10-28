@@ -75,7 +75,7 @@ public class MainStartActivity extends BaseActivity<MainStartPresenter> implemen
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
         ARouter.getInstance().inject(this);
-        ArmsUtils.statuInScreen(this);
+        ArmsUtils.statuInScreen(this);//全屏,并且沉侵式状态栏
         loadMyFragmentView();
         ArrayList<CustomTabEntity> mTabEntities = mPresenter.getTabEntity();
         mainTable.setTabData(mTabEntities);
