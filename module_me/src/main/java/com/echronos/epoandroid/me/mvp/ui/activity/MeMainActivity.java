@@ -4,10 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.echronos.epoandroid.me.R;
+import com.echronos.epoandroid.me.R2;
 import com.echronos.epoandroid.me.di.component.DaggerMeMainComponent;
 import com.echronos.epoandroid.me.mvp.contract.MeMainContract;
 import com.echronos.epoandroid.me.mvp.presenter.MeMainPresenter;
@@ -16,8 +16,6 @@ import com.jess.arms.base.BaseActivity;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.utils.ArmsUtils;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import me.jessyan.armscomponent.commonres.utils.MyFragmentUtils;
 import me.jessyan.armscomponent.commonsdk.core.RouterHub;
@@ -85,7 +83,13 @@ public class MeMainActivity extends BaseActivity<MeMainPresenter> implements MeM
         finish();
     }
 
-    @OnClick(R.id.public_toolbar_back)
+    @OnClick(R2.id.public_toolbar_back)
     public void onViewClicked() {
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
 }

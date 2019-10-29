@@ -142,4 +142,9 @@ public abstract class BaseActivity<P extends IPresenter> extends AppCompatActivi
     }
 
 
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
 }

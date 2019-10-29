@@ -73,7 +73,7 @@ public final class EventBusManager {
      */
     public void unregister(Object subscriber) {
         if (DEPENDENCY_ANDROID_EVENTBUS) {
-            EventBus.getDefault().unregister(subscriber);
+            org.simple.eventbus.EventBus.getDefault().register(subscriber);
         }
         if (DEPENDENCY_EVENTBUS) {
             if (haveAnnotation(subscriber)) {

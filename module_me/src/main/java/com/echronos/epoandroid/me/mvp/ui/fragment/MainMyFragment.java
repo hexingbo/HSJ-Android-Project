@@ -9,15 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.echronos.epoandroid.me.R;
 import com.echronos.epoandroid.me.R2;
 import com.echronos.epoandroid.me.di.component.DaggerMainMyComponent;
 import com.echronos.epoandroid.me.mvp.contract.MainMyContract;
 import com.echronos.epoandroid.me.mvp.presenter.MainMyPresenter;
+import com.echronos.epoandroid.me.mvp.ui.activity.MeMainActivity;
 import com.jess.arms.base.BaseFragment;
+import com.jess.arms.base.BaseLazyLoadFragment;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.utils.ArmsUtils;
 
+import butterknife.OnClick;
 import me.jessyan.armscomponent.commonsdk.core.RouterHub;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
@@ -31,8 +35,7 @@ import static com.jess.arms.utils.Preconditions.checkNotNull;
  * =============================================
  */
 @Route(path = RouterHub.Me_MainMyFragment)
-public class MainMyFragment extends BaseFragment<MainMyPresenter> implements MainMyContract.View {
-
+public class MainMyFragment extends BaseLazyLoadFragment<MainMyPresenter> implements MainMyContract.View {
 
     public static MainMyFragment newInstance() {
         MainMyFragment fragment = new MainMyFragment();
@@ -90,4 +93,14 @@ public class MainMyFragment extends BaseFragment<MainMyPresenter> implements Mai
 
     }
 
+    @OnClick(R2.id.ll_my_setting)
+    public void onViewClickedv(View view) {
+//        startActivity(new Intent(getContext(), MeMainActivity.class));
+                ARouter.getInstance().build(RouterHub.Me_MeMainActivity).navigation(getContext());
+    }
+
+    @Override
+    protected void lazyLoadData() {
+
+    }
 }

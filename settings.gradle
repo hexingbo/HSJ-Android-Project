@@ -1,1 +1,1 @@
-include ':app', ':CommonArms', ':CommonSDK', ':CommonService', ':CommonRes', ':module_me', ':FlycoTabLayout_Lib', ':Arms-Imageloader-Glide', ':arms', ':module_order'
+include ':app', ':CommonArms', ':CommonSDK', ':CommonService', ':CommonRes', ':module_me', ':FlycoTabLayout_Lib', ':Arms-Imageloader-Glide', ':arms', ':module_order', ':module_login'

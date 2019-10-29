@@ -6,8 +6,8 @@
         <item name="colorPrimary">@color/public_colorPrimary</item>
         <item name="colorPrimaryDark">@color/public_colorPrimaryDark</item>
         <item name="colorAccent">@color/public_colorAccent</item>
-        <item name="android:windowAnimationStyle">@style/public_Activity_Animation</item>
     </style>
+    <!--  <item name="android:windowAnimationStyle">@style/public_Activity_Animation</item> -->
 
     <style name="public_Activity_Animation">
         <item name="android:activityOpenEnterAnimation">@anim/public_translate_right_to_center</item>

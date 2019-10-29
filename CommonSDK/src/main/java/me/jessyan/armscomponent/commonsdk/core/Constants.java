@@ -20,11 +20,13 @@ package me.jessyan.armscomponent.commonsdk.core;
  * 作    者：贺兴波
  * 时    间：2019/8/2
  * 描    述：CommonSDK 的 Constants 可以定义公用的常量,
- *          比如关于业务的常量或者正则表达式,
- *          每个组件的 Constants 可以定义组件自己的私有常量
+ * 比如关于业务的常量或者正则表达式,
+ * 每个组件的 Constants 可以定义组件自己的私有常量
  * =============================================
  */
 public interface Constants {
 
-    String SP_TOKEN="token";
+    String SP_TOKEN = "token";
+    String sp_login_user = "sp_login_user";//登录时保存的账号
+
 }

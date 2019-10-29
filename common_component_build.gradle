@@ -35,6 +35,16 @@ android {
             buildConfigField "boolean", "LOG_DEBUG", "true"
             buildConfigField "boolean", "USE_CANARY", "true"
             buildConfigField "boolean", "IS_BUILD_MODULE", "${isBuildModule}"
+            buildConfigField "String", "BASE_DEFAULT_IMG_URL", BASE_DEFAULT_IMG_URL
+            buildConfigField "String", "BASE_URL", DEBUG_BASE_URL
+            buildConfigField "String", "BASE_WebSocketUrl", DEBUG_BASE_WebSocketUrl
+            buildConfigField "String", "WX_APPID", WX_APPID
+            buildConfigField "String", "WX_MinAPP_ID", WX_MinAPP_ID
+            buildConfigField "String", "WX_SECRET", WX_SECRET
+            buildConfigField "String", "WX_Heather_Key", WX_Heather_Key
+            buildConfigField "String", "WX_Heather_Value", WX_Heather_Value
+            buildConfigField "int", "HTTP_MaxRetries", HTTP_MaxRetries
+            buildConfigField "int", "HTTP_RetryDelaySecond", HTTP_RetryDelaySecond
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -43,6 +53,16 @@ android {
             buildConfigField "boolean", "LOG_DEBUG", "false"
             buildConfigField "boolean", "USE_CANARY", "false"
             buildConfigField "boolean", "IS_BUILD_MODULE", "${isBuildModule}"
+            buildConfigField "String", "BASE_DEFAULT_IMG_URL", BASE_DEFAULT_IMG_URL
+            buildConfigField "String", "BASE_URL", RELEASE_BASE_URL
+            buildConfigField "String", "BASE_WebSocketUrl", RELEASE_BASE_WebSocketUrl
+            buildConfigField "String", "WX_APPID", WX_APPID
+            buildConfigField "String", "WX_MinAPP_ID", WX_MinAPP_ID
+            buildConfigField "String", "WX_SECRET", WX_SECRET
+            buildConfigField "String", "WX_Heather_Key", WX_Heather_Key
+            buildConfigField "String", "WX_Heather_Value", WX_Heather_Value
+            buildConfigField "int", "HTTP_MaxRetries", HTTP_MaxRetries
+            buildConfigField "int", "HTTP_RetryDelaySecond", HTTP_RetryDelaySecond
             minifyEnabled true
             if (isBuildModule.toBoolean()) {
                 shrinkResources true

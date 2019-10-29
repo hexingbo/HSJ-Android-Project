@@ -46,4 +46,9 @@
     <color name="public_color_148CF9">#148CF9</color>
     <color name="public_color_2A2A2A">#2A2A2A</color>
     <color name="public_color_F9F9F9">#F9F9F9</color>
+
+    <!--渐变按钮的色值-->
+    <color name="color_startColor">#D81B60</color>
+    <color name="color_endColor">#fe6505</color>
+    <color name="color_shadow">#f6353d</color>
 </resources>

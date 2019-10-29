@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.widget.TextView;
 
 import com.echronos.epoandroid.module_order.R;
+import com.echronos.epoandroid.module_order.R2;
 import com.echronos.epoandroid.module_order.di.component.DaggerOrderListManagerComponent;
 import com.echronos.epoandroid.module_order.mvp.contract.OrderListManagerContract;
 import com.echronos.epoandroid.module_order.mvp.presenter.OrderListManagerPresenter;
@@ -31,7 +32,7 @@ import static com.jess.arms.utils.Preconditions.checkNotNull;
  */
 public class OrderListManagerActivity extends BaseActivity<OrderListManagerPresenter> implements OrderListManagerContract.View {
 
-    @BindView(R.id.public_toolbar_title)
+    @BindView(R2.id.public_toolbar_title)
     TextView publicToolbarTitle;
 
     @Override
@@ -84,7 +85,7 @@ public class OrderListManagerActivity extends BaseActivity<OrderListManagerPrese
     }
 
 
-    @OnClick(R.id.public_toolbar_back)
+    @OnClick(R2.id.public_toolbar_back)
     public void onViewClicked() {
         finish();
     }
