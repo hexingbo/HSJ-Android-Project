@@ -4,19 +4,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.view.View;
+import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.echronos.epoandroid.model_login.R;
+import com.echronos.epoandroid.model_login.R2;
+import com.echronos.epoandroid.model_login.di.component.DaggerUpdateLoginPasswordComponent;
+import com.echronos.epoandroid.model_login.mvp.contract.UpdateLoginPasswordContract;
+import com.echronos.epoandroid.model_login.mvp.presenter.UpdateLoginPasswordPresenter;
 import com.jess.arms.base.BaseActivity;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.utils.ArmsUtils;
 
-import com.echronos.epoandroid.model_login.di.component.DaggerUpdateLoginPasswordComponent;
-import com.echronos.epoandroid.model_login.mvp.contract.UpdateLoginPasswordContract;
-import com.echronos.epoandroid.model_login.mvp.presenter.UpdateLoginPasswordPresenter;
-
-import com.echronos.epoandroid.model_login.R;
-
-
+import butterknife.BindView;
+import butterknife.OnClick;
+import me.jessyan.armscomponent.commonres.other.ClearEditText;
 import me.jessyan.armscomponent.commonsdk.core.RouterHub;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
@@ -31,6 +34,19 @@ import static com.jess.arms.utils.Preconditions.checkNotNull;
  */
 @Route(path = RouterHub.Loging_UpdateLoginPasswordActivity)
 public class UpdateLoginPasswordActivity extends BaseActivity<UpdateLoginPasswordPresenter> implements UpdateLoginPasswordContract.View {
+
+    @BindView(R2.id.public_toolbar_title)
+    TextView publicToolbarTitle;
+    @BindView(R2.id.et_user)
+    ClearEditText etUser;
+    @BindView(R2.id.et_checkNumebr)
+    ClearEditText etCheckNumebr;
+    @BindView(R2.id.tv_send_number)
+    TextView tvSendNumber;
+    @BindView(R2.id.et_userPwd)
+    ClearEditText etUserPwd;
+    @BindView(R2.id.btn_submit)
+    TextView btnSubmit;
 
     @Override
     public void setupActivityComponent(@NonNull AppComponent appComponent) {
@@ -49,7 +65,8 @@ public class UpdateLoginPasswordActivity extends BaseActivity<UpdateLoginPasswor
 
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
-
+        setTitle(R.string.str_title_account_security_pwd);
+        btnSubmit.setText(R.string.str_value_ok);
     }
 
     @Override
@@ -77,5 +94,18 @@ public class UpdateLoginPasswordActivity extends BaseActivity<UpdateLoginPasswor
     @Override
     public void killMyself() {
         finish();
+    }
+
+
+    @OnClick({R2.id.public_toolbar_back, R2.id.tv_send_number, R2.id.btn_submit})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.public_toolbar_back:
+                break;
+            case R.id.tv_send_number:
+                break;
+            case R.id.btn_submit:
+                break;
+        }
     }
 }

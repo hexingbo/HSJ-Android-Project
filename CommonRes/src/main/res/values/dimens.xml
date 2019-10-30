@@ -21,6 +21,7 @@
 
     //高
     <dimen name="public_height_1dp">1dp</dimen>
+    <dimen name="public_height_14dp">14dp</dimen>
     <dimen name="public_height_18dp">18dp</dimen>
     <dimen name="public_height_20dp">20dp</dimen>
     <dimen name="public_height_24dp">24dp</dimen>

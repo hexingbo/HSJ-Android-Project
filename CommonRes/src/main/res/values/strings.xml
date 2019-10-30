@@ -4,6 +4,19 @@
     <string name="public_loading">加载中</string>
     <string name="public_name_my">我的</string>
     <string name="public_order_manager">订单管理</string>
+
+    <!--=================================常用字段===============================================-->
+    <string name="str_value_ok">确定</string>
+    <string name="str_value_confirm">确认</string>
+    <string name="str_value_cancel">取消</string>
+    <string name="str_value_update">修改</string>
+    <string name="str_value_delete">删除</string>
+    <string name="str_value_choise">请选择</string>
+    <string name="str_value_update_success">修改成功</string>
+    <string name="str_value_delete_success">删除成功</string>
+    <string name="str_value_add_success">添加成功</string>
+    <string name="str_value_reading_protocol_agree">请阅读协议并同意</string>
+    <string name="str_value_up_success">上架成功</string>
     <!--=================================登录页面===============================================-->
     <string name="login_lab_input_phone_number">输入您的手机号</string>
     <string name="login_hint_input_phone_number">请输入手机号</string>
@@ -22,7 +35,111 @@
     <string name="login_lab_login_type_wx">微信登录</string>
     <string name="login_lab_login_type_phone">账号登录</string>
     <string name="login_lab_login_type_sms">验证码登录</string>
-
-    <string name="public_register">注册</string>
-    <string name="public_register_agree_text">《华世界使用协议》</string>
+    <!--=================================注册页面===============================================-->
+    <string name="str_title_register_user">用户注册</string>
+    <string name="register_lab_input_phone_number">输入您的手机号</string>
+    <string name="register_hint_input_phone_number">请输入您的手机号</string>
+    <string name="register_hint_input_phone_number_length">请输入11位手机号</string>
+    <string name="register_lab_get_sms_number">获取验证码</string>
+    <string name="register_lab_input_sms_numebr">输入您的验证码</string>
+    <string name="register_hint_input_sms_number">请输入您的验证码</string>
+    <string name="register_hint_input_sms_number_length">请输入6位验证码</string>
+    <string name="register_lab_input_pwd">输入您的密码</string>
+    <string name="register_hint_input_pwd">请输入您的密码</string>
+    <string name="register_hint_input_pwd_length">请输入6-18位密码</string>
+    <string name="register_lab_submit_btn_value">同意协议并注册</string>
+    <string name="register_lab_registration_agreement">注册即同意</string>
+    <string name="register_lab_registration_agreement_value">《华世界使用协议》</string>
+    <string name="register_hint_registration_agreement">请同意注册协议后发起注册</string>
+    <!--=================================绑定手机号页面===============================================-->
+    <string name="str_title_bind_phone_number">绑定手机号</string>
+    <string name="binding_hint_input_phone_number">请输入绑定的手机号</string>
+    <string name="binding_hint_input_phone_number_length">请输入11位手机号</string>
+    <string name="binding_lab_get_sms_number">获取验证码</string>
+    <string name="binding_hint_input_sms_number">请输入验证吗</string>
+    <string name="binding_hint_input_sms_number_length">请输入6位短信验证码</string>
+    <!--=================================密码管理（修改、找回）页面===============================================-->
+    <string name="str_title_account_security_pwd">忘记密码</string>
+    <string name="account_security_title_find_login_pwd">找回登录密码</string>
+    <string name="account_security_title_update_login_pwd">修改登录密码</string>
+    <string name="account_security_lab_input_phone_number">输入您的手机号</string>
+    <string name="account_security_hint_input_phone_number">请输入手机号</string>
+    <string name="account_security_hint_input_phone_number_length">请输入11位手机号</string>
+    <string name="account_security_lab_input_sms_number">输入您的验证码</string>
+    <string name="account_security_hint_input_sms_number">请输入验证码</string>
+    <string name="account_security_hint_input_sms_number_length">请输入6位验证码</string>
+    <string name="account_security_lab_get_sms_number">获取验证码</string>
+    <string name="account_security_lab_input_pwd">输入您的密码</string>
+    <string name="account_security_hint_input_pwd">请输入密码</string>
+    <string name="account_security_hint_input_pwd_length">请输入6-18位登录密码</string>
+    <!--=================================个人名片编辑页面===============================================-->
+    <string name="str_title_user_info_card">个人名片</string>
+    <string name="userInfo_card_lab_brand_name">经营品牌</string>
+    <string name="userInfo_card_hint_input_brand_name">请输入经营品牌</string>
+    <string name="userInfo_card_lab_company_name">公司名称</string>
+    <string name="userInfo_card_hint_input_company_name">请输入公司名称</string>
+    <string name="userInfo_card_lab_user_name">姓名</string>
+    <string name="userInfo_card_hint_input_user_name">请输入姓名</string>
+    <string name="userInfo_card_lab_phone">电话</string>
+    <string name="userInfo_card_hint_input_phone">请输入电话</string>
+    <string name="userInfo_card_hint_input_phone_default">如:0755-00000000/13800000000</string>
+    <string name="userInfo_card_hint_input_phone_error">请输入正确的电话</string>
+    <string name="userInfo_card_hint_input_phone_length">请输入11位电话</string>
+    <string name="userInfo_card_lab_address">地址</string>
+    <string name="userInfo_card_hint_choise_address">请选择地址</string>
+    <!--=================================地址编辑页面===============================================-->
+    <string name="address_title_add_address">添加收货地址</string>
+    <string name="address_title_update_address">修改收货地址</string>
+    <string name="address_lab_address_name">地址名称</string>
+    <string name="address_hint_input_address_name">请输入地址名称</string>
+    <string name="address_lab_user_name">姓名</string>
+    <string name="address_hint_input_user_name">请输入姓名</string>
+    <string name="address_lab_user_phone">手机号码</string>
+    <string name="address_hint_input_user_phone">请输入手机号码</string>
+    <string name="address_hint_input_user_phone_length">请输入11位手机号码</string>
+    <string name="address_lab_address_diqu">所在地区</string>
+    <string name="address_hint_chiose_address_diqu">请选择省、市、区</string>
+    <string name="address_lab_detailed_address">详细地址</string>
+    <string name="address_hint_input_detailed_address">街道、楼牌号等详细地址</string>
+    <string name="address_hint_input_detailed_address_value">请输入详细地址</string>
+    <string name="address_lab_address_lab">地址标签</string>
+    <string name="address_hint_input_address_lab_value">请输入地址标签</string>
+    <string name="address_hint_input_address_lab">家、公司、店铺</string>
+    <string name="address_lab_setting_default_address">设置默认地址</string>
+    <string name="address_hint_delete_default_address_error">默认地址不能被删除</string>
+    <!--=================================发票信息编辑页面===============================================-->
+    <string name="ticket_title_add_ticket_info">添加发票</string>
+    <string name="ticket_title_update_ticket_info">修改发票</string>
+    <string name="ticket_lab_ticket_type">发票类型：</string>
+    <string name="ticket_hint_choise_ticket_type">请选择发票类型</string>
+    <string name="ticket_lab_company_name">单位名称：</string>
+    <string name="ticket_hint_input_company_name">请输入单位名称</string>
+    <string name="ticket_lab_taxpayer_number">纳税人识别码：</string>
+    <string name="ticket_hint_input_taxpayer_number">请输入纳税人识别码</string>
+    <string name="ticket_lab_register_address">注册地址：</string>
+    <string name="ticket_hint_input_register_address">请输注册地址</string>
+    <string name="ticket_lab_register_phone">注册电话：</string>
+    <string name="ticket_hint_input_register_phone">请输入注册电话</string>
+    <string name="ticket_hint_input_register_phone_error">请输入正确的注册电话</string>
+    <string name="ticket_lab_bank_name">开户银行：</string>
+    <string name="ticket_hint_input_bank_name">请输入开户银行</string>
+    <string name="ticket_lab_bank_number">银行账户：</string>
+    <string name="ticket_hint_input_bank_number">请输入银行账户</string>
+    <string name="ticket_hint_input_register_phone_default">如:0755-00000000/13800000000</string>
+    <string name="ticket_lab_user_name">姓名：</string>
+    <string name="ticket_hint_input_user_name">请输入姓名</string>
+    <string name="ticket_lab_user_email">邮箱：</string>
+    <string name="ticket_hint_input_user_email">请输入邮箱</string>
+    <string name="ticket_hint_input_user_email_error">邮箱格式不正确</string>
+    <string name="bank_car_title_add_bank_car">添加银行卡</string>
+    <string name="bank_car_title_update_bank_car">编辑银行卡</string>
+    <string name="bank_car_lab_user_name">收款人</string>
+    <string name="bank_car_hint_input_user_name">请输入收款人</string>
+    <string name="bank_car_lab_bank_car_number">银行卡号</string>
+    <string name="bank_car_hint_input_bank_car_number">请输入银行卡号</string>
+    <string name="bank_car_lab_bank_name">开户银行</string>
+    <string name="bank_car_hint_input_bank_name">请输入开户银行</string>
+    <string name="bank_car_lab_to_public">是否对公</string>
+    <string name="bank_car_lab_to_default">是否默认</string>
+    <string name="bank_car_hint_delete_default_bank_car_error">默认银行卡无法删除</string>
 </resources>
