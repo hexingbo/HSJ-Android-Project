@@ -7,6 +7,7 @@ import com.jess.arms.mvp.IView;
 import com.jess.arms.mvp.IModel;
 
 import io.reactivex.Observable;
+import me.jessyan.armscomponent.commonsdk.base.bean.HttpResult;
 import me.jessyan.armscomponent.commonsdk.base.enum_type.LoginType;
 import me.jessyan.armscomponent.commonsdk.base.enum_type.SmsCodeType;
 
@@ -29,9 +30,34 @@ public interface MainLoginContract {
 
     //Model层定义接口,外部只需关心Model返回的数据,无需关心内部细节,即是否使用缓存
     interface Model extends IModel {
+        /**
+         * 发送短信验证码
+         *
+         * @param phone
+         * @param smsCodeType
+         * @return
+         */
+        Observable<HttpResult> sendSMSCode(String phone, SmsCodeType smsCodeType);
 
-        Observable sendSMSCode(String phone, SmsCodeType smsCodeType);
+        /**
+         * 用户登录
+         *
+         * @param user
+         * @param pwd
+         * @param sms
+         * @param loginType
+         * @return
+         */
+        Observable<HttpResult<LoginResultBean>> postLoginUserApp(String user, String pwd, String sms, LoginType loginType);
 
-        Observable<LoginResultBean> postLoginUserApp(String user, String pwd, String sms, LoginType loginType);
+        /**
+         * 用户注册
+         */
+        void goMainRegisterUserActivity();
+
+        /**
+         * 用户找回密码
+         */
+        void goMainForgetPasswordActivity();
     }
 }

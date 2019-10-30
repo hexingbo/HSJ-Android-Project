@@ -17,6 +17,7 @@ package me.jessyan.armscomponent.commonsdk.core;
 
 import android.content.Context;
 import android.net.ParseException;
+import android.text.TextUtils;
 
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonParseException;
@@ -57,6 +58,8 @@ public class ResponseErrorListenerImpl implements ResponseErrorListener {
             msg = convertStatusCode(httpException);
         } else if (t instanceof JsonParseException || t instanceof ParseException || t instanceof JSONException || t instanceof JsonIOException) {
             msg = "数据解析错误";
+        } else {
+            msg = TextUtils.isEmpty(t.getMessage()) ? msg : t.getMessage();
         }
         ArmsUtils.snackbarText(msg);
     }

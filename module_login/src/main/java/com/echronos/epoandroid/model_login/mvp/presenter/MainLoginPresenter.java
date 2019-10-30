@@ -11,8 +11,10 @@ import com.jess.arms.http.imageloader.ImageLoader;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
+import me.jessyan.armscomponent.commonsdk.base.bean.HttpResult;
 import me.jessyan.armscomponent.commonsdk.base.enum_type.LoginType;
 import me.jessyan.armscomponent.commonsdk.base.enum_type.SmsCodeType;
+import me.jessyan.armscomponent.commonsdk.base.observer.MyHttpResultObserver;
 import me.jessyan.rxerrorhandler.core.RxErrorHandler;
 import me.jessyan.rxerrorhandler.handler.ErrorHandleSubscriber;
 import me.jessyan.rxerrorhandler.handler.RetryWithDelay;
@@ -118,10 +120,11 @@ public class MainLoginPresenter extends BasePresenter<MainLoginContract.Model, M
                     mRootView.hideLoading();//隐藏下拉刷新的进度条
                 })
                 .compose(RxLifecycleUtils.bindToLifecycle(mRootView))//使用 Rxlifecycle,使 Disposable 和 Activity 一起销毁
-                .subscribe(new ErrorHandleSubscriber<LoginResultBean>(mErrorHandler) {
-                    @Override
-                    public void onNext(LoginResultBean resultBean) {
+                .subscribe(new MyHttpResultObserver<HttpResult<LoginResultBean>>(mErrorHandler) {
 
+                    @Override
+                    public void onResult(HttpResult<LoginResultBean> result) {
+                        ArmsUtils.makeText(mRootView.getActivity(), result.toString());
                     }
                 });
     }
@@ -147,9 +150,9 @@ public class MainLoginPresenter extends BasePresenter<MainLoginContract.Model, M
                     mRootView.hideLoading();//隐藏下拉刷新的进度条
                 })
                 .compose(RxLifecycleUtils.bindToLifecycle(mRootView))//使用 Rxlifecycle,使 Disposable 和 Activity 一起销毁
-                .subscribe(new ErrorHandleSubscriber(mErrorHandler) {
+                .subscribe(new MyHttpResultObserver<HttpResult>(mErrorHandler) {
                     @Override
-                    public void onNext(Object o) {
+                    public void onResult(HttpResult result) {
 
                     }
                 });

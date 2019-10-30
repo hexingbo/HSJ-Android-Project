@@ -73,7 +73,7 @@
                         android:background="@color/public_color_F0F0F0" />
 
                     <me.jessyan.armscomponent.commonres.other.ClearEditText
-                        android:id="@+id/et_userPhone"
+                        android:id="@+id/et_user"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"

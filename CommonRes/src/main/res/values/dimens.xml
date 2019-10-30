@@ -47,6 +47,7 @@
     <dimen name="public_width_24dp">24dp</dimen>
     <dimen name="public_width_67dp">67dp</dimen>
     <dimen name="public_width_80dp">80dp</dimen>
+    <dimen name="public_width_90dp">90dp</dimen>
 
     //padding
     <dimen name="public_padding_20dp">20dp</dimen>

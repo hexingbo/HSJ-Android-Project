@@ -4,7 +4,9 @@ import android.app.Application;
 
 import com.echronos.epoandroid.model_login.mvp.model.api.service.ModuleLoginService;
 import com.echronos.epoandroid.model_login.mvp.model.entity.LoginResultBean;
+import com.echronos.epoandroid.model_login.mvp.ui.activity.MainRegisterUserActivity;
 import com.google.gson.Gson;
+import com.jess.arms.integration.AppManager;
 import com.jess.arms.integration.IRepositoryManager;
 import com.jess.arms.mvp.BaseModel;
 
@@ -15,6 +17,7 @@ import javax.inject.Inject;
 import com.echronos.epoandroid.model_login.mvp.contract.MainLoginContract;
 
 import io.reactivex.Observable;
+import me.jessyan.armscomponent.commonsdk.base.bean.HttpResult;
 import me.jessyan.armscomponent.commonsdk.base.enum_type.LoginType;
 import me.jessyan.armscomponent.commonsdk.base.enum_type.SmsCodeType;
 
@@ -52,7 +55,17 @@ public class MainLoginModel extends BaseModel implements MainLoginContract.Model
     }
 
     @Override
-    public Observable<LoginResultBean> postLoginUserApp(String user, String pwd, String smsCode, LoginType loginType) {
-        return mRepositoryManager.obtainRetrofitService(ModuleLoginService.class).postLoginUserApp(user, pwd, smsCode, loginType == LoginType.LoginType_SmsCode ? 1 : 2);
+    public Observable<HttpResult<LoginResultBean>> postLoginUserApp(String user, String pwd, String smsCode, LoginType loginType) {
+        return mRepositoryManager.obtainRetrofitService(ModuleLoginService.class).postLoginUserApp(user, pwd, smsCode, loginType == LoginType.LoginType_SmsCode ? 2 : 1);
+    }
+
+    @Override
+    public void goMainRegisterUserActivity() {
+        AppManager.getAppManager().startActivity(MainRegisterUserActivity.class);
+    }
+
+    @Override
+    public void goMainForgetPasswordActivity() {
+
     }
 }

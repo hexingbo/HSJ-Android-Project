@@ -40,8 +40,8 @@ import static com.jess.arms.utils.Preconditions.checkNotNull;
  */
 public class MainLoginActivity extends BaseActivity<MainLoginPresenter> implements MainLoginContract.View {
 
-    @BindView(R2.id.et_userPhone)
-    ClearEditText etUserPhone;
+    @BindView(R2.id.et_user)
+    ClearEditText etUser;
     @BindView(R2.id.tv_send_number)
     TextView tvSendNumber;
     @BindView(R2.id.et_userPwd)
@@ -81,7 +81,7 @@ public class MainLoginActivity extends BaseActivity<MainLoginPresenter> implemen
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
         ArmsUtils.statuInScreen(this);//全屏,并且沉侵式状态栏
-        etUserPhone.setText(DataHelper.getStringSF(this, Constants.sp_login_user));
+        etUser.setText(DataHelper.getStringSF(this, Constants.sp_login_user));
         changeLoginTypeView(mPresenter.getLoginType());
     }
 
@@ -141,14 +141,14 @@ public class MainLoginActivity extends BaseActivity<MainLoginPresenter> implemen
     @OnClick(R2.id.btn_submit)
     public void onClickSubmitLoginView() {
         // TODO: 2019/10/28 确认登录
-        mPresenter.postLoginUserApp(etUserPhone.getText().toString().trim(),
+        mPresenter.postLoginUserApp(etUser.getText().toString().trim(),
                 etUserPwd.getText().toString().trim(), etCheckNumebr.getText().toString().trim());
     }
 
     @OnClick(R2.id.tv_send_number)
     public void onClickSendSmsCodeView() {
         // TODO: 2019/10/28 发送短信验证码
-        mPresenter.sendSMSCode(etUserPhone.getText().toString().trim());
+        mPresenter.sendSMSCode(etUser.getText().toString().trim());
     }
 
     @OnClick(R2.id.tv_forget_pwd)

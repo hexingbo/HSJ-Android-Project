@@ -19,12 +19,12 @@ import com.echronos.epoandroid.model_login.mvp.model.api.Api;
 import com.echronos.epoandroid.model_login.mvp.model.entity.LoginResultBean;
 
 import io.reactivex.Observable;
+import me.jessyan.armscomponent.commonsdk.base.bean.HttpResult;
 import retrofit2.Retrofit;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
-import retrofit2.http.Query;
 
 import static me.jessyan.retrofiturlmanager.RetrofitUrlManager.DOMAIN_NAME_HEADER;
 
@@ -50,16 +50,16 @@ public interface ModuleLoginService {
      * @return
      */
     @FormUrlEncoded
-    @Headers({DOMAIN_NAME_HEADER + Api.LOGIN_DOMAIN})
+    @Headers({DOMAIN_NAME_HEADER + Api.LOGIN_DOMAIN_NAME})
     @POST("channel/im/app_user_login/")
-    Observable<LoginResultBean> postLoginUserApp(@Field("account") String user, @Query("password") String password, @Field("sms_code") String sms_code, @Field("type") int loginType);
+    Observable<HttpResult<LoginResultBean>> postLoginUserApp(@Field("account") String user, @Field("password") String password, @Field("sms_code") String sms_code, @Field("type") int loginType);
 
     /**
      * 获取短信验证码
      */
     @FormUrlEncoded
-    @Headers({DOMAIN_NAME_HEADER + Api.LOGIN_DOMAIN})
+    @Headers({DOMAIN_NAME_HEADER + Api.LOGIN_DOMAIN_NAME})
     @POST("channel/im/app_Phone_Verification_Code/")
-    Observable<LoginResultBean> sendSmsCode( @Query("phone") String phone,@Field("type") int type);
+    Observable<HttpResult> sendSmsCode( @Field("phone") String phone,@Field("type") int type);
 
 }
