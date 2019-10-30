@@ -86,7 +86,7 @@ public class LoginMainActivity extends BaseActivity<LoginMainPresenter> implemen
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
         ArmsUtils.statuInScreen(this);//全屏,并且沉侵式状态栏
-        btnSubmit.setText(R.string.public_login);
+        btnSubmit.setText(R.string.login_lab_login);
         etUser.setText(DataHelper.getStringSF(this, Constants.sp_login_user));
         changeLoginTypeView(mPresenter.getLoginType());
     }
