@@ -24,6 +24,18 @@ android {
         }
         multiDexEnabled true
     }
+
+    signingConfigs {
+        config {
+            //签名文件在项目根目录下
+            //KEY_ALIAS，KEY_PASSWORD，STORE_PASSWORD写在项目根目录下的gradle.properties里
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+            storeFile file('../hsjapp.jks')
+            storePassword STORE_PASSWORD
+        }
+    }
+
     buildTypes {
         debug {
             buildConfigField "boolean", "LOG_DEBUG", "true"
@@ -31,6 +43,7 @@ android {
             buildConfigField "boolean", "IS_BUILD_MODULE", "${isBuildModule}"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config// signingConfig signingConfigs.config//使用上面配置的签名进行打包
         }
 
         release {
@@ -41,6 +54,7 @@ android {
             shrinkResources true
             zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config// signingConfig signingConfigs.config//使用上面配置的签名进行打包
         }
     }
 

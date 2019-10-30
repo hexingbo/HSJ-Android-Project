@@ -42,13 +42,11 @@ import com.jess.arms.integration.AppManager;
 import java.security.MessageDigest;
 
 /**
- * ================================================
- * 一些框架常用的工具
- * <p>
- * Created by JessYan on 2015/11/23.
- * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
- * <a href="https://github.com/JessYanCoding">Follow me</a>
- * ================================================
+ * =============================================
+ * 作    者：贺兴波
+ * 时    间：2019/10/29
+ * 描    述：一些框架常用的工具
+ * =============================================
  */
 public class ArmsUtils {
     static public Toast mToast;

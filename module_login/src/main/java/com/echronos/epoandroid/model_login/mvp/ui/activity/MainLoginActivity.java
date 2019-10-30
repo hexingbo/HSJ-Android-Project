@@ -10,18 +10,15 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.echronos.epoandroid.model_login.R;
 import com.echronos.epoandroid.model_login.R2;
-import com.jess.arms.base.BaseActivity;
-import com.jess.arms.di.component.AppComponent;
-import com.jess.arms.utils.ArmsUtils;
-
 import com.echronos.epoandroid.model_login.di.component.DaggerMainLoginComponent;
 import com.echronos.epoandroid.model_login.mvp.contract.MainLoginContract;
 import com.echronos.epoandroid.model_login.mvp.presenter.MainLoginPresenter;
-
-import com.echronos.epoandroid.model_login.R;
+import com.jess.arms.base.BaseActivity;
+import com.jess.arms.di.component.AppComponent;
+import com.jess.arms.utils.ArmsUtils;
 import com.jess.arms.utils.DataHelper;
-
 
 import javax.inject.Inject;
 
