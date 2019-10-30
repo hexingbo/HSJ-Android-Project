@@ -47,7 +47,7 @@
             android:value="ConfigModule" />
 
         <activity
-            android:name=".mvp.ui.activity.MainLoginActivity"
+            android:name=".mvp.ui.activity.LoginMainActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -56,7 +56,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mvp.ui.activity.MainRegisterUserActivity"></activity>
+        <activity android:name=".mvp.ui.activity.RegisterUserActivity" />
+        <activity android:name=".mvp.ui.activity.UpdateLoginPasswordActivity"></activity>
     </application>
 
 </manifest>

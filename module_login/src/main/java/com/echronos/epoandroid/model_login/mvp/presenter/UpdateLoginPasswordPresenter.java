@@ -11,18 +11,18 @@ import me.jessyan.rxerrorhandler.core.RxErrorHandler;
 
 import javax.inject.Inject;
 
-import com.echronos.epoandroid.model_login.mvp.contract.MainRegisterUserContract;
+import com.echronos.epoandroid.model_login.mvp.contract.UpdateLoginPasswordContract;
 
 
 /**
  * =============================================
  * 作    者：贺兴波
- * 时    间：2019/10/30 11:13
+ * 时    间：2019/10/30 14:10
  * 描    述：
  * =============================================
  */
 @ActivityScope
-public class MainRegisterUserPresenter extends BasePresenter<MainRegisterUserContract.Model, MainRegisterUserContract.View> {
+public class UpdateLoginPasswordPresenter extends BasePresenter<UpdateLoginPasswordContract.Model, UpdateLoginPasswordContract.View> {
     @Inject
     RxErrorHandler mErrorHandler;
     @Inject
@@ -33,7 +33,7 @@ public class MainRegisterUserPresenter extends BasePresenter<MainRegisterUserCon
     AppManager mAppManager;
 
     @Inject
-    public MainRegisterUserPresenter(MainRegisterUserContract.Model model, MainRegisterUserContract.View rootView) {
+    public UpdateLoginPasswordPresenter(UpdateLoginPasswordContract.Model model, UpdateLoginPasswordContract.View rootView) {
         super(model, rootView);
     }
 

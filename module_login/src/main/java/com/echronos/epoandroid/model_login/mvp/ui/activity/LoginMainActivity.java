@@ -10,11 +10,12 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.echronos.epoandroid.model_login.R;
 import com.echronos.epoandroid.model_login.R2;
-import com.echronos.epoandroid.model_login.di.component.DaggerMainLoginComponent;
-import com.echronos.epoandroid.model_login.mvp.contract.MainLoginContract;
-import com.echronos.epoandroid.model_login.mvp.presenter.MainLoginPresenter;
+import com.echronos.epoandroid.model_login.di.component.DaggerLoginMainComponent;
+import com.echronos.epoandroid.model_login.mvp.contract.LoginMainContract;
+import com.echronos.epoandroid.model_login.mvp.presenter.LoginMainPresenter;
 import com.jess.arms.base.BaseActivity;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.utils.ArmsUtils;
@@ -27,6 +28,7 @@ import butterknife.OnClick;
 import me.jessyan.armscomponent.commonres.other.ClearEditText;
 import me.jessyan.armscomponent.commonsdk.base.enum_type.LoginType;
 import me.jessyan.armscomponent.commonsdk.core.Constants;
+import me.jessyan.armscomponent.commonsdk.core.RouterHub;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
 
@@ -38,7 +40,8 @@ import static com.jess.arms.utils.Preconditions.checkNotNull;
  * 描    述：登录
  * =============================================
  */
-public class MainLoginActivity extends BaseActivity<MainLoginPresenter> implements MainLoginContract.View {
+@Route(path = RouterHub.Loging_MainLoginActivity)
+public class LoginMainActivity extends BaseActivity<LoginMainPresenter> implements LoginMainContract.View {
 
     @BindView(R2.id.et_user)
     ClearEditText etUser;
@@ -65,7 +68,7 @@ public class MainLoginActivity extends BaseActivity<MainLoginPresenter> implemen
 
     @Override
     public void setupActivityComponent(@NonNull AppComponent appComponent) {
-        DaggerMainLoginComponent //如找不到该类,请编译一下项目
+        DaggerLoginMainComponent //如找不到该类,请编译一下项目
                 .builder()
                 .appComponent(appComponent)
                 .view(this)
@@ -154,13 +157,13 @@ public class MainLoginActivity extends BaseActivity<MainLoginPresenter> implemen
     @OnClick(R2.id.tv_forget_pwd)
     public void onClickForgetPwdView() {
         // TODO: 2019/10/28 忘记密码
-
+        mPresenter.goMainForgetPasswordActivity();
     }
 
     @OnClick(R2.id.tv_phone_register)
     public void onClickRegisterUserView() {
         // TODO: 2019/10/28 用户注册
-
+    mPresenter.goMainRegisterUserActivity();
     }
 
     @OnClick(R2.id.lv_login_type_wx)

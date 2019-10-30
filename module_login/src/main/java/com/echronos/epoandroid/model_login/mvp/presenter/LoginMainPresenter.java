@@ -3,6 +3,7 @@ package com.echronos.epoandroid.model_login.mvp.presenter;
 import android.app.Application;
 
 import com.echronos.epoandroid.model_login.BuildConfig;
+import com.echronos.epoandroid.model_login.mvp.contract.LoginMainContract;
 import com.echronos.epoandroid.model_login.mvp.model.entity.LoginResultBean;
 import com.jess.arms.integration.AppManager;
 import com.jess.arms.di.scope.ActivityScope;
@@ -16,12 +17,10 @@ import me.jessyan.armscomponent.commonsdk.base.enum_type.LoginType;
 import me.jessyan.armscomponent.commonsdk.base.enum_type.SmsCodeType;
 import me.jessyan.armscomponent.commonsdk.base.observer.MyHttpResultObserver;
 import me.jessyan.rxerrorhandler.core.RxErrorHandler;
-import me.jessyan.rxerrorhandler.handler.ErrorHandleSubscriber;
 import me.jessyan.rxerrorhandler.handler.RetryWithDelay;
 
 import javax.inject.Inject;
 
-import com.echronos.epoandroid.model_login.mvp.contract.MainLoginContract;
 import com.jess.arms.utils.ArmsUtils;
 import com.jess.arms.utils.RxLifecycleUtils;
 
@@ -34,7 +33,7 @@ import com.jess.arms.utils.RxLifecycleUtils;
  * =============================================
  */
 @ActivityScope
-public class MainLoginPresenter extends BasePresenter<MainLoginContract.Model, MainLoginContract.View> {
+public class LoginMainPresenter extends BasePresenter<LoginMainContract.Model, LoginMainContract.View> {
     @Inject
     RxErrorHandler mErrorHandler;
     @Inject
@@ -45,7 +44,7 @@ public class MainLoginPresenter extends BasePresenter<MainLoginContract.Model, M
     AppManager mAppManager;
 
     @Inject
-    public MainLoginPresenter(MainLoginContract.Model model, MainLoginContract.View rootView) {
+    public LoginMainPresenter(LoginMainContract.Model model, LoginMainContract.View rootView) {
         super(model, rootView);
     }
 
@@ -157,4 +156,18 @@ public class MainLoginPresenter extends BasePresenter<MainLoginContract.Model, M
                     }
                 });
     }
+
+    /**
+     * 注册新用户
+     */
+    public void goMainRegisterUserActivity(){
+        mModel.goMainRegisterUserActivity();
+    }
+    /**
+     * 找回密码
+     */
+    public void goMainForgetPasswordActivity(){
+        mModel.goMainForgetPasswordActivity();
+    }
+
 }

@@ -9,6 +9,6 @@
             android:name="com.echronos.epoandroid.model_login.app.GlobalConfiguration"
             android:value="ConfigModule" />
 
-        <activity android:name=".mvp.ui.activity.MainLoginActivity"></activity>
+        <activity android:name=".mvp.ui.activity.LoginMainActivity"></activity>
     </application>
 </manifest>

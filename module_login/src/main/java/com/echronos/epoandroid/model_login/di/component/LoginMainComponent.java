@@ -6,10 +6,10 @@ import dagger.Component;
 import com.jess.arms.di.component.AppComponent;
 
 import com.echronos.epoandroid.model_login.di.module.MainLoginModule;
-import com.echronos.epoandroid.model_login.mvp.contract.MainLoginContract;
+import com.echronos.epoandroid.model_login.mvp.contract.LoginMainContract;
 
 import com.jess.arms.di.scope.ActivityScope;
-import com.echronos.epoandroid.model_login.mvp.ui.activity.MainLoginActivity;
+import com.echronos.epoandroid.model_login.mvp.ui.activity.LoginMainActivity;
 
 
 /**
@@ -21,16 +21,16 @@ import com.echronos.epoandroid.model_login.mvp.ui.activity.MainLoginActivity;
  */
 @ActivityScope
 @Component(modules = MainLoginModule.class, dependencies = AppComponent.class)
-public interface MainLoginComponent {
-    void inject(MainLoginActivity activity);
+public interface LoginMainComponent {
+    void inject(LoginMainActivity activity);
 
     @Component.Builder
     interface Builder {
         @BindsInstance
-        MainLoginComponent.Builder view(MainLoginContract.View view);
+        LoginMainComponent.Builder view(LoginMainContract.View view);
 
-        MainLoginComponent.Builder appComponent(AppComponent appComponent);
+        LoginMainComponent.Builder appComponent(AppComponent appComponent);
 
-        MainLoginComponent build();
+        LoginMainComponent build();
     }
 }

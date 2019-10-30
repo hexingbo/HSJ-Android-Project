@@ -22,4 +22,7 @@
     <string name="login_lab_login_type_wx">微信登录</string>
     <string name="login_lab_login_type_phone">账号登录</string>
     <string name="login_lab_login_type_sms">验证码登录</string>
+
+    <string name="public_register">注册</string>
+    <string name="public_register_agree_text">《华世界使用协议》</string>
 </resources>

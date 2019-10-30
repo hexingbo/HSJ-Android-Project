@@ -2,6 +2,7 @@ package com.echronos.epoandroid.model_login.mvp.model;
 
 import android.app.Application;
 
+import com.echronos.epoandroid.model_login.mvp.contract.RegisterUserContract;
 import com.google.gson.Gson;
 import com.jess.arms.integration.IRepositoryManager;
 import com.jess.arms.mvp.BaseModel;
@@ -9,8 +10,6 @@ import com.jess.arms.mvp.BaseModel;
 import com.jess.arms.di.scope.ActivityScope;
 
 import javax.inject.Inject;
-
-import com.echronos.epoandroid.model_login.mvp.contract.MainRegisterUserContract;
 
 
 /**
@@ -21,14 +20,14 @@ import com.echronos.epoandroid.model_login.mvp.contract.MainRegisterUserContract
  * =============================================
  */
 @ActivityScope
-public class MainRegisterUserModel extends BaseModel implements MainRegisterUserContract.Model {
+public class RegisterUserModel extends BaseModel implements RegisterUserContract.Model {
     @Inject
     Gson mGson;
     @Inject
     Application mApplication;
 
     @Inject
-    public MainRegisterUserModel(IRepositoryManager repositoryManager) {
+    public RegisterUserModel(IRepositoryManager repositoryManager) {
         super(repositoryManager);
     }
 

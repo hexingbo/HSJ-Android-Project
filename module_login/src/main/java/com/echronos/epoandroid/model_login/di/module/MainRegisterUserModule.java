@@ -1,7 +1,7 @@
 package com.echronos.epoandroid.model_login.di.module;
 
-import com.echronos.epoandroid.model_login.mvp.contract.MainRegisterUserContract;
-import com.echronos.epoandroid.model_login.mvp.model.MainRegisterUserModel;
+import com.echronos.epoandroid.model_login.mvp.contract.RegisterUserContract;
+import com.echronos.epoandroid.model_login.mvp.model.RegisterUserModel;
 
 import dagger.Binds;
 import dagger.Module;
@@ -18,5 +18,5 @@ import dagger.Module;
 public abstract class MainRegisterUserModule {
 
     @Binds
-    abstract MainRegisterUserContract.Model bindMainRegisterUserModel(MainRegisterUserModel model);
+    abstract RegisterUserContract.Model bindMainRegisterUserModel(RegisterUserModel model);
 }

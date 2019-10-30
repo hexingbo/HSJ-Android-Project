@@ -6,10 +6,10 @@ import dagger.Component;
 import com.jess.arms.di.component.AppComponent;
 
 import com.echronos.epoandroid.model_login.di.module.MainRegisterUserModule;
-import com.echronos.epoandroid.model_login.mvp.contract.MainRegisterUserContract;
+import com.echronos.epoandroid.model_login.mvp.contract.RegisterUserContract;
 
 import com.jess.arms.di.scope.ActivityScope;
-import com.echronos.epoandroid.model_login.mvp.ui.activity.MainRegisterUserActivity;
+import com.echronos.epoandroid.model_login.mvp.ui.activity.RegisterUserActivity;
 
 
 /**
@@ -21,16 +21,16 @@ import com.echronos.epoandroid.model_login.mvp.ui.activity.MainRegisterUserActiv
  */
 @ActivityScope
 @Component(modules = MainRegisterUserModule.class, dependencies = AppComponent.class)
-public interface MainRegisterUserComponent {
-    void inject(MainRegisterUserActivity activity);
+public interface RegisterUserComponent {
+    void inject(RegisterUserActivity activity);
 
     @Component.Builder
     interface Builder {
         @BindsInstance
-        MainRegisterUserComponent.Builder view(MainRegisterUserContract.View view);
+        RegisterUserComponent.Builder view(RegisterUserContract.View view);
 
-        MainRegisterUserComponent.Builder appComponent(AppComponent appComponent);
+        RegisterUserComponent.Builder appComponent(AppComponent appComponent);
 
-        MainRegisterUserComponent build();
+        RegisterUserComponent build();
     }
 }
