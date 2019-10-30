@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.echronos.epoandroid.module_order.R;
 import com.echronos.epoandroid.module_order.R2;
 import com.echronos.epoandroid.module_order.di.component.DaggerOrderListManagerComponent;
@@ -19,6 +20,7 @@ import com.jess.arms.utils.ArmsUtils;
 import butterknife.BindView;
 import butterknife.OnClick;
 import me.jessyan.armscomponent.commonres.utils.MyFragmentUtils;
+import me.jessyan.armscomponent.commonsdk.core.RouterHub;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
 
@@ -30,6 +32,7 @@ import static com.jess.arms.utils.Preconditions.checkNotNull;
  * 描    述：订单列表管理
  * =============================================
  */
+@Route(path = RouterHub.Order_OrderListManagerActivity)
 public class OrderListManagerActivity extends BaseActivity<OrderListManagerPresenter> implements OrderListManagerContract.View {
 
     @BindView(R2.id.public_toolbar_title)

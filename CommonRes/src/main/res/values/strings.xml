@@ -142,4 +142,6 @@
     <string name="bank_car_lab_to_public">是否对公</string>
     <string name="bank_car_lab_to_default">是否默认</string>
     <string name="bank_car_hint_delete_default_bank_car_error">默认银行卡无法删除</string>
+    <!--=================================购物车页面===============================================-->
+    <string name="public_shopping_cart">购物车</string>
 </resources>

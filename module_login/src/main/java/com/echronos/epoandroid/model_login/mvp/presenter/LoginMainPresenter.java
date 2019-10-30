@@ -110,7 +110,9 @@ public class LoginMainPresenter extends BasePresenter<LoginMainContract.Model, L
         }
         mModel.postLoginUserApp(user, pwd, sms, loginType)
                 .subscribeOn(Schedulers.io())
-                .retryWhen(new RetryWithDelay(BuildConfig.HTTP_MaxRetries, BuildConfig.HTTP_RetryDelaySecond))//遇到错误时重试,第一个参数为重试几次,第二个参数为重试的间隔
+                .retryWhen(new RetryWithDelay(
+                        //遇到错误时重试,第一个参数为重试几次,第二个参数为重试的间隔
+                        BuildConfig.HTTP_MaxRetries, BuildConfig.HTTP_RetryDelaySecond))
                 .doOnSubscribe(disposable -> {
                     mRootView.showLoading();//显示下拉刷新的进度条
                 }).subscribeOn(AndroidSchedulers.mainThread())
@@ -118,7 +120,8 @@ public class LoginMainPresenter extends BasePresenter<LoginMainContract.Model, L
                 .doFinally(() -> {
                     mRootView.hideLoading();//隐藏下拉刷新的进度条
                 })
-                .compose(RxLifecycleUtils.bindToLifecycle(mRootView))//使用 Rxlifecycle,使 Disposable 和 Activity 一起销毁
+                //使用 Rxlifecycle,使 Disposable 和 Activity 一起销毁
+                .compose(RxLifecycleUtils.bindToLifecycle(mRootView))
                 .subscribe(new MyHttpResultObserver<HttpResult<LoginResultBean>>(mErrorHandler) {
 
                     @Override
@@ -140,7 +143,9 @@ public class LoginMainPresenter extends BasePresenter<LoginMainContract.Model, L
         }
         mModel.sendSMSCode(phone, SmsCodeType.SmsCodeType_Login)
                 .subscribeOn(Schedulers.io())
-                .retryWhen(new RetryWithDelay(BuildConfig.HTTP_MaxRetries, BuildConfig.HTTP_RetryDelaySecond))//遇到错误时重试,第一个参数为重试几次,第二个参数为重试的间隔
+                .retryWhen(new RetryWithDelay(
+                        //遇到错误时重试,第一个参数为重试几次,第二个参数为重试的间隔
+                        BuildConfig.HTTP_MaxRetries, BuildConfig.HTTP_RetryDelaySecond))
                 .doOnSubscribe(disposable -> {
                     mRootView.showLoading();//显示下拉刷新的进度条
                 }).subscribeOn(AndroidSchedulers.mainThread())
@@ -148,7 +153,8 @@ public class LoginMainPresenter extends BasePresenter<LoginMainContract.Model, L
                 .doFinally(() -> {
                     mRootView.hideLoading();//隐藏下拉刷新的进度条
                 })
-                .compose(RxLifecycleUtils.bindToLifecycle(mRootView))//使用 Rxlifecycle,使 Disposable 和 Activity 一起销毁
+                //使用 Rxlifecycle,使 Disposable 和 Activity 一起销毁
+                .compose(RxLifecycleUtils.bindToLifecycle(mRootView))
                 .subscribe(new MyHttpResultObserver<HttpResult>(mErrorHandler) {
                     @Override
                     public void onResult(HttpResult result) {

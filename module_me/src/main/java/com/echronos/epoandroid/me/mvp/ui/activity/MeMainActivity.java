@@ -83,9 +83,6 @@ public class MeMainActivity extends BaseActivity<MeMainPresenter> implements MeM
         finish();
     }
 
-    @OnClick(R2.id.public_toolbar_back)
-    public void onViewClicked() {
-    }
 
     @Override
     public void onBackPressed() {

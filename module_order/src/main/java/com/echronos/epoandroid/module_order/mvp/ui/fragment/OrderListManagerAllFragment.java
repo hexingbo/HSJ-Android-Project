@@ -9,19 +9,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.echronos.epoandroid.module_order.R;
+import com.echronos.epoandroid.module_order.di.component.DaggerOrderListManagerAllComponent;
+import com.echronos.epoandroid.module_order.mvp.contract.OrderListManagerAllContract;
+import com.echronos.epoandroid.module_order.mvp.presenter.OrderListManagerAllPresenter;
 import com.jess.arms.base.BaseFragment;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.utils.ArmsUtils;
 
-import com.echronos.epoandroid.module_order.di.component.DaggerOrderListManagerAllComponent;
-import com.echronos.epoandroid.module_order.mvp.contract.OrderListManagerAllContract;
-import com.echronos.epoandroid.module_order.mvp.presenter.OrderListManagerAllPresenter;
-
-import com.echronos.epoandroid.module_order.R;
-
-import butterknife.BindView;
+import me.jessyan.armscomponent.commonsdk.core.RouterHub;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
 
@@ -33,6 +31,7 @@ import static com.jess.arms.utils.Preconditions.checkNotNull;
  * 描    述：订单列表
  * =============================================
  */
+@Route(path = RouterHub.Order_OrderListManagerAllFragment)
 public class OrderListManagerAllFragment extends BaseFragment<OrderListManagerAllPresenter> implements OrderListManagerAllContract.View {
 
     public static OrderListManagerAllFragment newInstance() {

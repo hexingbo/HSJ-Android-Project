@@ -1,10 +1,13 @@
 package me.jessyan.armscomponent.commonsdk.base.observer;
 
+import com.jess.arms.integration.AppManager;
 import com.jess.arms.utils.DataHelper;
 
 import me.jessyan.armscomponent.commonsdk.base.app.MyBaseApplication;
 import me.jessyan.armscomponent.commonsdk.base.bean.MyHttpResult;
 import me.jessyan.armscomponent.commonsdk.core.Constants;
+import me.jessyan.armscomponent.commonsdk.core.RouterHub;
+import me.jessyan.armscomponent.commonsdk.utils.Utils;
 import me.jessyan.rxerrorhandler.core.RxErrorHandler;
 import me.jessyan.rxerrorhandler.handler.ErrorHandleSubscriber;
 
@@ -29,8 +32,8 @@ public abstract class MyHttpResultObserver<T extends MyHttpResult> extends Error
                 break;
             case Login_Error_Code://登录失效
                 onError(new Throwable("登录失效，请重新登录"));
-                DataHelper.setStringSF(MyBaseApplication.mContext, Constants.SP_TOKEN, "");
-//                Utils.navigation(MyBaseApplication.mContext, RouterHub.Login_Activity_LoginActivity);
+                DataHelper.setStringSF(AppManager.getAppManager().getCurrentActivity(), Constants.SP_TOKEN, "");
+                Utils.navigation(MyBaseApplication.mContext, RouterHub.Loging_MainLoginActivity);
                 break;
             case Other_Code://其他
                 onError(new Throwable(httpResult.getMsg()));

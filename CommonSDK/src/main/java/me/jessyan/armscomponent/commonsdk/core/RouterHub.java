@@ -44,8 +44,9 @@ public interface RouterHub {
      */
     String APP = "/app";//宿主 App 组件
     String Me = "/me";//我的组件
-    String Loging = "/Loging";//登录组件
-    String Order = "/Order";//订单组件
+    String Loging = "/loging";//登录组件
+    String Order = "/order";//订单组件
+    String Cart = "/cart";//购物车组件
 
     /**
      * 服务组件, 用于给每个组件暴露特有的服务
@@ -67,5 +68,13 @@ public interface RouterHub {
     //登录
     String Loging_MainLoginActivity = Loging + "/MainLoginActivity";
     String Loging_MainRegisterUserActivity = Loging + "/MainRegisterUserActivity";
-    String Loging_UpdateLoginPasswordActivity =Loging + "/UpdateLoginPasswordActivity" ;
+    String Loging_UpdateLoginPasswordActivity = Loging + "/UpdateLoginPasswordActivity";
+
+    //订单
+    String Order_OrderListManagerActivity = Order + "/OrderListManagerActivity";
+    String Order_OrderListManagerAllFragment = Order + "/OrderListManagerAllFragment";
+
+    //购物车
+    String Cart_ShoppingCartManagerActivity = Cart + "/ShoppingCartManagerActivity";
+    String Cart_ShoppingCartAllFragment = Cart + "/ShoppingCartAllFragment";
 }

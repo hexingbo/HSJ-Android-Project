@@ -19,7 +19,6 @@ import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.utils.ArmsUtils;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import me.jessyan.armscomponent.commonres.other.ClearEditText;
 import me.jessyan.armscomponent.commonsdk.core.RouterHub;
@@ -100,11 +99,9 @@ public class RegisterUserActivity extends BaseActivity<RegisterUserPresenter> im
         finish();
     }
 
-    @OnClick({R2.id.public_toolbar_back, R2.id.tv_send_number, R2.id.btn_submit, R2.id.tv_AgreeInfo})
+    @OnClick({ R2.id.tv_send_number, R2.id.btn_submit, R2.id.tv_AgreeInfo})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.public_toolbar_back:
-                break;
             case R.id.tv_send_number:
                 break;
             case R.id.btn_submit:
