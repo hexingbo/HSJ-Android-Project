@@ -42,20 +42,6 @@ ext {
             "glide-loader-okhttp3"     : "com.github.bumptech.glide:okhttp3-integration:4.9.0",
             "picasso"                  : "com.squareup.picasso:picasso:2.5.2",
 
-            //view
-            "autolayout"               : "com.zhy:autolayout:1.4.5",
-            "butterknife"              : "com.jakewharton:butterknife:${version["butterknifeSdkVersion"]}",
-            "butterknife-compiler"     : "com.jakewharton:butterknife-compiler:${version["butterknifeSdkVersion"]}",
-            "pickerview"               : "com.contrarywind:Android-PickerView:3.2.5",
-            "photoview"                : "com.github.chrisbanes.photoview:library:1.2.3",
-            "numberprogressbar"        : "com.daimajia.numberprogressbar:library:1.2@aar",
-            "nineoldandroids"          : "com.nineoldandroids:library:2.4.0",
-            "paginate"                 : "com.github.markomilos:paginate:0.5.1",
-            "vlayout"                  : "com.alibaba.android:vlayout:1.1.0@aar",
-            "lottie"                   : "com.airbnb.android:lottie:2.7.0",
-            "autosize"                 : "me.jessyan:autosize:1.1.1",
-            "loadLayout"               : "com.github.hexingbo:LoadLayout:1.0.1",
-
             "rxcache-jolyglot-gson"    : "com.github.VictorAlbertos.Jolyglot:gson:0.0.4",
             "rxbinding-recyclerview-v7": "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:1.0.1",
             //rx2
@@ -99,6 +85,21 @@ ext {
             "logger"                   : "com.orhanobut:logger:2.2.0",
             "canary-debug"             : "com.squareup.leakcanary:leakcanary-android:${version["canarySdkVersion"]}",
             "canary-release"           : "com.squareup.leakcanary:leakcanary-android-no-op:${version["canarySdkVersion"]}",//LeakCanary是Square公司基于MAT开源的一个工具，用来检测Android App中的内存泄露问题官方地址：https://github.com/square/leakcanary。
-            "umeng-analytics"          : "com.umeng.analytics:analytics:6.0.1"
+            "umeng-analytics"          : "com.umeng.analytics:analytics:6.0.1",
+
+            //view
+            "autolayout"               : "com.zhy:autolayout:1.4.5",
+            "butterknife"              : "com.jakewharton:butterknife:${version["butterknifeSdkVersion"]}",
+            "butterknife-compiler"     : "com.jakewharton:butterknife-compiler:${version["butterknifeSdkVersion"]}",
+            "pickerview"               : "com.contrarywind:Android-PickerView:3.2.5",
+            "photoview"                : "com.github.chrisbanes.photoview:library:1.2.3",
+            "numberprogressbar"        : "com.daimajia.numberprogressbar:library:1.2@aar",
+            "nineoldandroids"          : "com.nineoldandroids:library:2.4.0",
+            "paginate"                 : "com.github.markomilos:paginate:0.5.1",
+            "vlayout"                  : "com.alibaba.android:vlayout:1.1.0@aar",
+            "lottie"                   : "com.airbnb.android:lottie:2.7.0",
+            "autosize"                 : "me.jessyan:autosize:1.1.1",
+            "loadLayout"               : "com.github.hexingbo:LoadLayout:1.0.1",
+
     ]
 }

@@ -8,13 +8,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Arms-Imageloader-Glide" />
             <option value="$PROJECT_DIR$/CommonArms" />
             <option value="$PROJECT_DIR$/CommonRes" />
             <option value="$PROJECT_DIR$/CommonSDK" />
             <option value="$PROJECT_DIR$/CommonService" />
-            <option value="$PROJECT_DIR$/FlycoTabLayout_Lib" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/lib_easyrecyclerview" />
+            <option value="$PROJECT_DIR$/lib_flycotablayout" />
+            <option value="$PROJECT_DIR$/lib_imageloader_glide" />
             <option value="$PROJECT_DIR$/module_cart" />
             <option value="$PROJECT_DIR$/module_login" />
             <option value="$PROJECT_DIR$/module_me" />

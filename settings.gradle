@@ -1,1 +1,1 @@
-include ':app', ':CommonArms', ':CommonSDK', ':CommonService', ':CommonRes', ':module_me', ':FlycoTabLayout_Lib', ':Arms-Imageloader-Glide', ':module_order', ':module_login', ':module_weixin', ':module_cart'
+include ':app', ':CommonArms', ':CommonSDK', ':CommonService', ':CommonRes', ':module_me', ':lib_flycotablayout', ':lib_imageloader_glide', ':module_order', ':module_login', ':module_weixin', ':module_cart', ':lib_easyrecyclerview'
