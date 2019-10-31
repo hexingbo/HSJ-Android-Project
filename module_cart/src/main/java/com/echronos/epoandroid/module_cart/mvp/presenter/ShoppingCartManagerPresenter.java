@@ -38,6 +38,11 @@ public class ShoppingCartManagerPresenter extends BasePresenter<ShoppingCartMana
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         this.mErrorHandler = null;

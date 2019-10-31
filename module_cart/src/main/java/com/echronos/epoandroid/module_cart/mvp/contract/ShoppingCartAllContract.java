@@ -6,6 +6,7 @@ import com.jess.arms.mvp.IView;
 import java.util.List;
 
 import io.reactivex.Observable;
+import me.jessyan.armscomponent.commonres.base.LoadlayoutViewInflater;
 import me.jessyan.armscomponent.commonres.enums.SaleToCollectionType;
 import me.jessyan.armscomponent.commonsdk.base.bean.HttpResult;
 import okhttp3.RequestBody;
@@ -20,7 +21,7 @@ import okhttp3.RequestBody;
  */
 public interface ShoppingCartAllContract {
     //对于经常使用的关于UI的方法可以定义到IView中,如显示隐藏进度条,和显示文字消息
-    interface View extends IView {
+    interface View extends IView ,LoadlayoutViewInflater {
 
     }
 

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.hxb.app.loadlayoutlibrary.State;
 import com.jess.arms.base.BaseFragment;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.utils.ArmsUtils;
@@ -21,6 +22,7 @@ import com.echronos.epoandroid.module_cart.mvp.presenter.ShoppingCartAllPresente
 
 import com.echronos.epoandroid.module_cart.R;
 
+import me.jessyan.armscomponent.commonres.base.BaseLoadLayoutFragment;
 import me.jessyan.armscomponent.commonsdk.core.RouterHub;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
@@ -34,7 +36,7 @@ import static com.jess.arms.utils.Preconditions.checkNotNull;
  * =============================================
  */
 @Route(path = RouterHub.Cart_ShoppingCartAllFragment)
-public class ShoppingCartAllFragment extends BaseFragment<ShoppingCartAllPresenter> implements ShoppingCartAllContract.View {
+public class ShoppingCartAllFragment extends BaseLoadLayoutFragment<ShoppingCartAllPresenter> implements ShoppingCartAllContract.View {
 
     public static ShoppingCartAllFragment newInstance() {
         ShoppingCartAllFragment fragment = new ShoppingCartAllFragment();
@@ -58,7 +60,8 @@ public class ShoppingCartAllFragment extends BaseFragment<ShoppingCartAllPresent
 
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
-        mPresenter.getCartList();
+        setToolbarTitle(R.string.public_shopping_cart);
+       setLayoutState_LOADING();
     }
 
     /**
@@ -128,4 +131,12 @@ public class ShoppingCartAllFragment extends BaseFragment<ShoppingCartAllPresent
     public void killMyself() {
 
     }
+
+    @Override
+    public void onLoad() {
+        mPresenter.getCartList();
+    }
+
+
+
 }

@@ -17,6 +17,7 @@ import javax.inject.Inject;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
+import me.jessyan.armscomponent.commonres.base.LoadlayoutViewInflater;
 import me.jessyan.armscomponent.commonres.enums.SaleToCollectionType;
 import me.jessyan.armscomponent.commonsdk.base.bean.HttpResult;
 import me.jessyan.armscomponent.commonsdk.base.observer.MyHttpResultObserver;
@@ -89,7 +90,7 @@ public class ShoppingCartAllPresenter extends BasePresenter<ShoppingCartAllContr
 
                     @Override
                     public void onResult(HttpResult result) {
-                        ArmsUtils.makeText(AppManager.getAppManager().getCurrentActivity(), result.toString());
+                        ArmsUtils.snackbarText(result.toString());
                     }
                 });
     }
@@ -188,6 +189,13 @@ public class ShoppingCartAllPresenter extends BasePresenter<ShoppingCartAllContr
                     @Override
                     public void onResult(HttpResult result) {
                         mRootView.showMessage(result.toString());
+                        mRootView.setLayoutState_SUCCESS();
+                    }
+
+                    @Override
+                    public void onError(Throwable t) {
+                        super.onError(t);
+                        mRootView.setLayoutState_FAILED();
                     }
                 });
     }

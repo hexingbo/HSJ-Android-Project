@@ -54,7 +54,6 @@ public class ShoppingCartManagerActivity extends BaseActivity<ShoppingCartManage
 
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
-        setTitle(R.string.public_shopping_cart);
         MyFragmentUtils.addFragment(getSupportFragmentManager(),  ShoppingCartAllFragment.newInstance(), R.id.fl_content);
     }
 

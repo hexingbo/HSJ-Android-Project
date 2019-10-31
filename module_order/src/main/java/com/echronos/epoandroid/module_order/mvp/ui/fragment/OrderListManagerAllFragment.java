@@ -19,6 +19,7 @@ import com.jess.arms.base.BaseFragment;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.utils.ArmsUtils;
 
+import me.jessyan.armscomponent.commonres.base.BaseLoadLayoutFragment;
 import me.jessyan.armscomponent.commonsdk.core.RouterHub;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
@@ -32,7 +33,7 @@ import static com.jess.arms.utils.Preconditions.checkNotNull;
  * =============================================
  */
 @Route(path = RouterHub.Order_OrderListManagerAllFragment)
-public class OrderListManagerAllFragment extends BaseFragment<OrderListManagerAllPresenter> implements OrderListManagerAllContract.View {
+public class OrderListManagerAllFragment extends BaseLoadLayoutFragment<OrderListManagerAllPresenter> implements OrderListManagerAllContract.View {
 
     public static OrderListManagerAllFragment newInstance() {
         OrderListManagerAllFragment fragment = new OrderListManagerAllFragment();
@@ -56,6 +57,7 @@ public class OrderListManagerAllFragment extends BaseFragment<OrderListManagerAl
 
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
+        setLayoutState_LOADING();
     }
 
     /**
@@ -123,6 +125,11 @@ public class OrderListManagerAllFragment extends BaseFragment<OrderListManagerAl
 
     @Override
     public void killMyself() {
+
+    }
+
+    @Override
+    public void onLoad() {
 
     }
 }
