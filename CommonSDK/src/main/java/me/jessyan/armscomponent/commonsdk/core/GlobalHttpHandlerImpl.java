@@ -76,8 +76,8 @@ public class GlobalHttpHandlerImpl implements GlobalHttpHandler {
     @Override
     public Request onHttpRequestBefore(Interceptor.Chain chain, Request request) {
         //  如果需要再请求服务器之前做一些操作, 则重新返回一个做过操作的的 Request 如增加 Header, 不做操作则直接返回参数 request
-        return chain.request().newBuilder().header("access-token","712d9735-09e2-4eb6-85a2-c557069f8017").build();
-//        return chain.request().newBuilder().header("token", DataHelper.getStringSF(MyBaseApplication.mContext, Constants.SP_TOKEN)).build();
+//        return chain.request().newBuilder().header("access-token","36f5e73b-7ee2-484c-878e-3d9d973fdf79").build();
+        return chain.request().newBuilder().header("access-token", DataHelper.getStringSF(MyBaseApplication.mContext, Constants.SP_TOKEN)).build();
 //        return request;
     }
 }

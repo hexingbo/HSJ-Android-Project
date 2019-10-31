@@ -82,12 +82,11 @@ public interface ModuleCartService {
     /**
      * 购物车列表
      *
-     * @param cat_type
      * @return
      */
     @Headers({DOMAIN_NAME_HEADER + Api.CART_DOMAIN_NAME})
     @GET("channel/v2/cartList/")
-    Observable<HttpResult> getCartList(@Query("cat_type") String cat_type);
+    Observable<HttpResult> getCartList();
 
     /**
      * 推荐的商品
@@ -110,7 +109,7 @@ public interface ModuleCartService {
     @FormUrlEncoded
     @Headers({DOMAIN_NAME_HEADER + Api.CART_DOMAIN_NAME})
     @POST("channel/deport/sale_collection/")
-    Observable<HttpResult> postSaleToCollection(@Field("type") String type, @Body RequestBody body);
+    Observable<HttpResult> postSaleToCollection(@Field("type") int type, @Body RequestBody body);
 
 
 }

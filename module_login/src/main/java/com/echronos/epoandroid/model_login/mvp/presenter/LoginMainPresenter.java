@@ -12,9 +12,9 @@ import com.jess.arms.http.imageloader.ImageLoader;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
+import me.jessyan.armscomponent.commonres.enums.LoginType;
+import me.jessyan.armscomponent.commonres.enums.SmsCodeType;
 import me.jessyan.armscomponent.commonsdk.base.bean.HttpResult;
-import me.jessyan.armscomponent.commonsdk.base.enum_type.LoginType;
-import me.jessyan.armscomponent.commonsdk.base.enum_type.SmsCodeType;
 import me.jessyan.armscomponent.commonsdk.base.observer.MyHttpResultObserver;
 import me.jessyan.rxerrorhandler.core.RxErrorHandler;
 import me.jessyan.rxerrorhandler.handler.RetryWithDelay;

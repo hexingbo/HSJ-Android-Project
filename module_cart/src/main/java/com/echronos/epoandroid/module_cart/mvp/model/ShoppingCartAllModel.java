@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 import io.reactivex.Observable;
+import me.jessyan.armscomponent.commonres.enums.SaleToCollectionType;
 import me.jessyan.armscomponent.commonsdk.base.bean.HttpResult;
 import me.jessyan.armscomponent.commonsdk.base.bean.RequestBodyBean;
 import me.jessyan.armscomponent.commonsdk.utils.RequestBodyUtil;
@@ -67,8 +68,8 @@ public class ShoppingCartAllModel extends BaseModel implements ShoppingCartAllCo
     }
 
     @Override
-    public Observable<HttpResult> getCartList(String cat_type) {
-        return mRepositoryManager.obtainRetrofitService(ModuleCartService.class).getCartList(cat_type);
+    public Observable<HttpResult> getCartList() {
+        return mRepositoryManager.obtainRetrofitService(ModuleCartService.class).getCartList();
     }
 
     @Override
@@ -77,10 +78,10 @@ public class ShoppingCartAllModel extends BaseModel implements ShoppingCartAllCo
     }
 
     @Override
-    public Observable<HttpResult> postSaleToCollection(String type, List<String> snap_ids) {
+    public Observable<HttpResult> postSaleToCollection(SaleToCollectionType type, List<String> snap_ids) {
         Map<String, List<String>> mapList = new HashMap<>();
         mapList.put("id", snap_ids);
-        return mRepositoryManager.obtainRetrofitService(ModuleCartService.class).postSaleToCollection(type,
+        return mRepositoryManager.obtainRetrofitService(ModuleCartService.class).postSaleToCollection(type==SaleToCollectionType.SaleToCollection?1:0,
                 RequestBodyUtil.getRequestBodyValue(new RequestBodyBean(mapList, null)));
     }
 }

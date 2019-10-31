@@ -14,9 +14,9 @@ import com.jess.arms.mvp.BaseModel;
 import javax.inject.Inject;
 
 import io.reactivex.Observable;
+import me.jessyan.armscomponent.commonres.enums.LoginType;
+import me.jessyan.armscomponent.commonres.enums.SmsCodeType;
 import me.jessyan.armscomponent.commonsdk.base.bean.HttpResult;
-import me.jessyan.armscomponent.commonsdk.base.enum_type.LoginType;
-import me.jessyan.armscomponent.commonsdk.base.enum_type.SmsCodeType;
 import me.jessyan.armscomponent.commonsdk.core.RouterHub;
 
 

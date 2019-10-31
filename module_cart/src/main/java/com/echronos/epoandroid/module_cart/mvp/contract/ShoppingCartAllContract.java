@@ -6,6 +6,7 @@ import com.jess.arms.mvp.IView;
 import java.util.List;
 
 import io.reactivex.Observable;
+import me.jessyan.armscomponent.commonres.enums.SaleToCollectionType;
 import me.jessyan.armscomponent.commonsdk.base.bean.HttpResult;
 import okhttp3.RequestBody;
 
@@ -55,10 +56,9 @@ public interface ShoppingCartAllContract {
         /**
          * 购物车列表
          *
-         * @param cat_type
          * @return
          */
-        Observable<HttpResult> getCartList( String cat_type);
+        Observable<HttpResult> getCartList();
 
         /**
          * 推荐的商品
@@ -76,7 +76,7 @@ public interface ShoppingCartAllContract {
          * @param snap_ids
          * @return
          */
-        Observable<HttpResult> postSaleToCollection( String type,  List<String> snap_ids);
+        Observable<HttpResult> postSaleToCollection(SaleToCollectionType type, List<String> snap_ids);
 
     }
 }

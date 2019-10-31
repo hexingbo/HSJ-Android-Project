@@ -1,4 +1,4 @@
-package me.jessyan.armscomponent.commonsdk.base.enum_type;
+package me.jessyan.armscomponent.commonres.enums;
 
 /**
  * @Author :hexingbo
